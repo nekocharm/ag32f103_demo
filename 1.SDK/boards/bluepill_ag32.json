@@ -1,0 +1,48 @@
+{
+  "build": {
+    "mabi": "ilp32f",
+    "march": "rv32imafc",
+    "mcmodel": "medlow",
+    "f_cpu": "100000000L",
+    "mcu": "agrv2k"
+  },
+  "debug": {
+    "jlink_device": "AltaRiscv",
+    "svd_path": "AgRV2K.svd",
+    "onboard_tools": [
+      "cmsis-dap-openocd",
+      "jlink-openocd",
+      "jlink-openocd-jtag"
+    ],
+    "default_tools": [
+      "jlink-openocd"
+    ]
+  },
+  "frameworks": [
+    "agrv_sdk",
+    "agrv_ips",
+    "agrv_tinyusb",
+    "agrv_lwip",
+    "agrv_freertos",
+    "agrv_rtthread",
+    "agrv_ucos"
+  ],
+  "name": "BluePill AG32",
+  "device_id" : "0x40200001",
+  "upload": {
+    "maximum_ram_size": 131072,
+    "maximum_size": 262144,
+    "protocols": [
+      "serial",
+      "cmsis-dap-openocd",
+      "jlink-openocd",
+      "jlink-openocd-jtag"
+    ],
+    "protocol": "jlink-openocd"
+  },
+  "logic": {
+    "device": "AGRV2KL48"
+  },
+  "url": "https://www.alta-gate.com/products",
+  "vendor": "Alta Gate"
+}
